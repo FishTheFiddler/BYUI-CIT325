@@ -12,8 +12,7 @@ SPOOL dwarf_t.txt
 
 -- ... insert your solution here ...
 /****************************************************************
-A dwarf_t object type and type body in a dwarf_t.sql file, which 
-includes a QUIT; body and header must match
+* DWARF HEADER
 *****************************************************************/
 CREATE OR REPLACE
   TYPE dwarf_t UNDER base_t
