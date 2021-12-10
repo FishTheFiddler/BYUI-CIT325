@@ -19,9 +19,7 @@ SPOOL elf_t.txt
 *********************************************************************************/
 CREATE OR REPLACE
   TYPE elf_t UNDER base_t
-  ( /*oid     NUMBER
-  , oname   VARCHAR2(30)*/
-    name    VARCHAR2(30)
+  ( name    VARCHAR2(30)
   , genus   VARCHAR2(30)
   , CONSTRUCTOR FUNCTION elf_t
         ( name       VARCHAR2
@@ -40,8 +38,7 @@ DESC elf_t
 /********************************************************************************
 * ELF BODY CODE
 *********************************************************************************/
-CREATE OR REPLACE TYPE BODY elf_t IS
-  /* Implement a default constructor. */  
+CREATE OR REPLACE TYPE BODY elf_t IS 
   CONSTRUCTOR FUNCTION elf_t
         ( name      VARCHAR2
         , genus     VARCHAR2 DEFAULT 'Elves' ) RETURN SELF AS RESULT IS
